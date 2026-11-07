@@ -1,0 +1,27 @@
+name: Engineering observation
+description: Report a reproducible software or design observation without claiming unmeasured results.
+body:
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation and reproduction
+      description: Include commit, configuration, SI units, expected/observed behavior and logs without credentials.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence type
+      options:
+        - SIMULATED
+        - CALCULATED
+        - AUTOMATED SOFTWARE TEST
+        - PHYSICAL MEASUREMENT (attach setup and uncertainty)
+        - NOT_VERIFIED
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits, source and safety implications
+      description: Do not enable actuation or reproduce a hazardous condition to file this report.

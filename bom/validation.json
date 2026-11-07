@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07",
+  "engine": "bundled @oai/artifact-tool",
+  "checks": [
+    "Missing quotes retain UNKNOWN",
+    "Explicit zero quote remains valid",
+    "One quote cannot complete budget",
+    "Quantity times min recalculates",
+    "Inverted price interval rejected",
+    "Complete Lite minimum reconciles",
+    "Complete Lite maximum reconciles",
+    "Contingency 6 recalculates",
+    "Complete Smart minimum reconciles",
+    "Complete Smart maximum reconciles",
+    "Contingency 7 recalculates",
+    "Empty selection cannot become complete zero budget"
+  ],
+  "physical_validation": "NOT_MEASURED",
+  "excel_native_validation": "NOT_VERIFIED",
+  "rows": 35,
+  "quotation_state": "UNKNOWN",
+  "price_cells_restored_blank": true
+}

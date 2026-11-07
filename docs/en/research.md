@@ -1,0 +1,24 @@
+# References, comparison and originality
+
+Checked 2026-11-07 against author repositories, author product pages and public GitHub metadata. No third-party implementation, CAD, Gerber, driver or product image was copied. A repository README describes its author's implementation; it is not independent hardware validation. GAIA's current deliverable is a virtual educational design, not a new invention claim, certified device or manufactured product.
+
+| Reference / primary source | Author-described scope | License observed / reuse boundary | Lesson for GAIA |
+|---|---|---|---|
+| [QiTech JARVIS Winder](https://github.com/QiTech-Industries/Winder), [hardware repository linked by author](https://github.com/QiTech-Industries/winder-parts), [official machine page](https://en.qitech.de/maschinen/winder) | ESP32 winding/rewinding, mobile web control and machine ecosystem | Firmware repository GPL-3.0, archived when checked. Hardware/web components need separate license review | Separate metering/tension/traverse; original GAIA scope transfers existing filament, not an extrusion line |
+| [heartpolik/spool-winder](https://github.com/heartpolik/spool-winder) | ESP32-C3, spindle/traverse stepper drivers, filament motion/presence sensor and web configuration | No SPDX license detected by GitHub metadata; reuse rights NOT_VERIFIED; no code copied | Pin-budget and motor-enable behavior matter; zero commanded speed is not de-energization |
+| [LTS Respooler](https://github.com/LukasT03/LTS-Respooler), [official software page](https://lts-design.com/pages/software) | Compact respooler, filament runout, wireless app connectivity; Pro guide servo described by author | GitHub firmware/files repository reports MIT. Do not infer that separately hosted printable models/assets have the same license | Good documentation/accessibility target; avoid assuming a guide servo alone validates winding |
+| [V-Spooler Motor Mod](https://github.com/krumpton/VSpooler-Motor-Mod) | ESP32/stepper add-on, presence detection and acceleration; author lists current/stall detection as future work | GPL-3.0 repository metadata; underlying mechanical project separate | Distinguish firmware demand, material motion and blocked receiver; electrical levels require datasheets |
+| GAIA Lite (PROPOSED) | DC gearmotor, external PWM, two spools, passive tension, manual traverse, external scale; no MCU required | Original source MIT; components retain their own licenses | Lower complexity; no automatic target or measured line speed claimed |
+| GAIA Smart (VIRTUAL / INITIAL CODE) | Browser simulator, encoder math, ESP32 state/calibration/persistence/serial firmware; conceptual powered traverse | Original source MIT; no imported reference source | pt-BR education, explicit evidence, length↔estimated mass, modular Lite/Smart; live web/receiver/traverse still incomplete |
+
+Proposed differentiators are Brazilian documentation, accessible manufacture, modularity, understandable metrology and a pt-BR interface. They are goals, not claims of priority, commercial superiority or Brazil's first manufacturer. Inspiration from the need Pedro attributes to Verboera 3D does not establish sponsorship, partnership, permission to use logos, endorsement or commercial commitment. GAIA/UFTM naming in this draft describes the requested initiative; institutional publication review remains pending.
+
+## Primary technical references
+
+- [NIST TN1297 propagation](https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty): first-order sensitivity/covariance method; this project's simplified mass uncertainty assumes uncorrelated inputs and is not a calibration certificate.
+- [Polymaker technical data](https://wiki.polymaker.com/polymaker-products/polymaker-filaments/technical-data-at-a-glance): product-specific material properties differ. Simulator densities are labelled ASSUMED rather than attributed to a verified brand/batch.
+- [ESP-IDF PCNT](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/pcnt.html): native pulse counting is a future alternative to the initial interrupt decoder; it does not prove this machine's edge-rate capacity.
+- [Arduino-ESP32 LEDC migration](https://docs.espressif.com/projects/arduino-esp32/en/latest/migration_guides/2.x_to_3.0.html): 2.x/3.x API difference motivates a pinned PlatformIO platform. See firmware README for actual compiler/platform versions and measured binary sizes.
+- Manufacturer component references and search-versus-verified quotation status live next to the BOM and hardware notes, not as fabricated prices in this comparison.
+
+Metadata observed: QiTech archived; the other three repositories nonarchived. License metadata is a scoped observation, not a legal opinion or blanket permission to relicense linked content. Verify before incorporating future third-party files.

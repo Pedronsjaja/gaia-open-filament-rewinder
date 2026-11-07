@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "tool": "OpenSCAD 2021.01 CLI",
+  "triangles": 1052,
+  "undirected_edges": 1578,
+  "edges_with_incidence_not_two": 0,
+  "bounds_mm": [
+    [
+      0,
+      620
+    ],
+    [
+      0,
+      300
+    ],
+    [
+      0,
+      12
+    ]
+  ],
+  "signed_volume_mm3": 2230861.3595265606,
+  "scope": "Base concept mesh only; not structural, dimensional fit or physical safety validation",
+  "assembly_lite_csg": "GENERATED",
+  "assembly_smart_csg": "GENERATED",
+  "physical_validation": "NOT_MEASURED",
+  "step_export": "NOT_GENERATED"
+}
