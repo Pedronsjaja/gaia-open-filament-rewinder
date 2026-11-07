@@ -1,6 +1,6 @@
 # Validation and phase handoff — 2026-11-07
 
-This is a local review candidate. No public repository, public push, Pages deployment, hardware build, upload to ESP32, physical calibration, purchase or commercial verification was performed. Windows local software evidence is distinct from proposed CI and physical validation.
+Initial validation was local. Pedro subsequently explicitly approved public repository creation/push and GitHub Pages on2026-11-07. The [repository](https://github.com/Pedronsjaja/gaia-open-filament-rewinder) and [Actions records](https://github.com/Pedronsjaja/gaia-open-filament-rewinder/actions) distinguish remote CI/deploy execution from the local evidence below. No hardware build, upload to ESP32, physical calibration, purchase or commercial verification was performed. Public web delivery does not change any physical validation boundary.
 
 | Phase | Created deliverables | Executed evidence | Limits / next gate |
 |---|---|---|---|
@@ -8,7 +8,7 @@ This is a local review candidate. No public repository, public push, Pages deplo
 | 2 BOM/mechanics | bom/bom.csv, gaia-rewinder-bom.xlsx, validation.json; hardware/cad/rewinder.scad, Lite/Smart CSG, base STL/validation; eleven original SVGs | Both workbook tabs rendered/inspected, 12 formula-input checks; OpenSCAD2021.01 generated outputs; independent STL mesh checks | Quotes0%, totals UNKNOWN; no STEP, verified fit/stiffness or reviewed electrical schematic; native Excel NOT_VERIFIED |
 | 3 demonstrator | software/web/, software/simulator/, tests/, tools/, examples/ |25 Node tests passed locally; browser checks start, pause, goal completion/history, injected fault/reset, calibration, reload without restart and390px viewport; static build passed | Browser simulation only. Actual Android/iPhone devices NOT_TESTED. No inertia/coast/slip model or real device connection |
 | 4 firmware | firmware/platformio.ini, lib/RewinderCore/, src/main.cpp, test/, README | Portable C++ suite passed, real ESP32 cross-build passed | No upload, physical I/O timing, NVS power-loss, motor control, powered traverse or HTTP/WS validation; default actuation OFF |
-| 5 docs/publication | Portuguese beginner/safety guides, English engineering/architecture/research, contribution/license/changelog, issue form, CI/manual Pages workflows | Markdown local links checked, JS syntax/tests, static site build; local Git review candidate | Remote CI NOT_RUN; repository/Pages publication requires explicit authorization; no public URL claimed |
+| 5 docs/publication | Portuguese beginner/safety guides, English engineering/architecture/research, contribution/license/changelog, issue form, CI/manual Pages workflows | Local links/JS/static build checked; repository publication authorized and performed; remote execution evidence in Actions | Pages remains a manual workflow; verify its deployment conclusion, never infer it from a local build |
 
 ## Reproduction
 
@@ -37,9 +37,9 @@ See hardware/cad/validation.md/json: generated base1052 triangles,1578 edges, ea
 
 See bom/validation.json:35 proposed rows; initial required/included lines Lite21 and Smart31, quotation coverage0%, totals UNKNOWN.12 checks cover missing prices, explicit documented zero, changed input, reversed range, partial coverage, empty selection and a fully quoted disposable scenario including min/max/reserve; temporary inputs were restored before export. No test-only prices became quotations. Artifact-tool formula/render checks passed; native Excel/LibreOffice recalculation was not executed.
 
-## Before physical validation or public release
+## Publication and remaining physical gates
 
-1. Pedro reviews the exact local files, scope and institutional naming; explicitly authorizes remote account/repository and Pages if desired.
+1. Publication to Pedro's account and Pages was explicitly approved. This does not establish separate institutional endorsement, commercial readiness or hardware approval. Verify actual CI/deployment records for each commit.
 2. Select actual encoder/board/spools/guide and measure geometry; reconcile complete BOM and purchasing quotes.
 3. Review mechanical retention/guards and the power/E-stop/current-limit circuit with explicit acceptance criteria.
 4. Implement and test traverse, homing, speed/tension feedback where justified, full interlocks, authorized transport and loss-of-link behavior.

@@ -4,6 +4,8 @@
 
 Transfere filamento **já fabricado** entre carretéis. Não é extrusora, recicladora ou linha de produção de filamento. Esta versão oferece uma demonstração web funcional, cálculos reproduzíveis, firmware inicial compilável e projeto mecânico conceitual. **Nenhum protótipo físico foi construído ou validado neste trabalho.**
 
+[Abrir demonstração web](https://pedronsjaja.github.io/gaia-open-filament-rewinder/) · [Código no GitHub](https://github.com/Pedronsjaja/gaia-open-filament-rewinder) · [Ver execuções e deploy](https://github.com/Pedronsjaja/gaia-open-filament-rewinder/actions). A hospedagem usa o workflow manual de Pages; o estado de cada publicação está nas execuções.
+
 ## Experimente agora no computador
 
 Com Node.js 24 ou superior, abra um terminal nesta pasta:
@@ -20,7 +22,7 @@ npm run examples
 npm run build
 ```
 
-O build prepara `build/site/` para hospedagem estática; **não publica nada**. O workflow manual de Pages está pronto para uso após autorização, criação do repositório público e habilitação de GitHub Pages. Não existe URL pública de demonstração nesta entrega local.
+O build local prepara `build/site/`; **não publica nada**. Pedro autorizou a criação do repositório público e o GitHub Pages em07/11/2026. A publicação web depende da execução bem-sucedida do workflow manual de Pages; alterações locais não fazem deploy automaticamente.
 
 ## Lite ou Smart?
 
@@ -48,7 +50,7 @@ O build prepara `build/site/` para hospedagem estática; **não publica nada**. 
 | Mecânica | OpenSCAD original paramétrico Lite/Smart, CSG e STL real da base; conceitual, sem toleranciamento ou liberação para fabricação |
 | Ilustrações | 11 SVG originais: vistas, trajetória, medição, transmissão, guia, elétrica e comunicação |
 | BOM | 35 itens em Excel/CSV; sem preços inventados. Cobertura inicial de cotações 0%; totais `UNKNOWN` |
-| Publicação | Arquivos e workflows preparados localmente; push público e deploy dependem de autorização explícita |
+| Publicação | Repositório público autorizado e criado; demonstração distribuída pelo workflow manual de Pages. Confira o resultado em Actions |
 
 ## Onde encontrar
 
